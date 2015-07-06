@@ -1,6 +1,0 @@
-#!/bin/sh
-
-set -ex
-
-./scripts/build
-open index.html

@@ -1,5 +1,0 @@
-#!/bin/sh
-
-set -ex
-
-elm make src/Tetris.elm
