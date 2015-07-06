@@ -4,11 +4,11 @@
 
 [![Build Status](https://travis-ci.org/chendrix/elm-tetris.svg?branch=master)](https://travis-ci.org/chendrix/elm-tetris)
 
-## Scripts
+## Commands
 
-There are several scripts located in `./scripts` which can be run:
+The `Makefile` contains several commands
 
-* `bootstrap` to install the relevant stuff to run your tests for the first time
-* `run_tests` to run your tests
-* `build` to build `elm.js`
-* `open` to build and open the project in a browser
+* `make test/boostrap` to install the relevant stuff to run your tests for the first time
+* `make test` to run your tests
+* `make` to build `elm.js`
+* `make open` to build and open the project in a browser

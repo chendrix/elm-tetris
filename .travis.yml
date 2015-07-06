@@ -2,14 +2,11 @@ language: node_js
 node_js:
 - stable
 install:
-- npm install --global elm
-- curl https://raw.githubusercontent.com/maxsnew/IO/master/elm-io.sh > elm-io.sh
-- npm install jsdom
-- elm-package install -y
+- make travis/install
+- make package/install
 before_script:
-- elm-make --yes --output raw-test.js TestRunner.elm
-- bash elm-io.sh raw-test.js test.js
-script: node test.js
+- make travis/before
+script: make test
 deploy:
   provider: heroku
   api_key:
