@@ -3,7 +3,7 @@
     "repository": "https://github.com/chendrix/elm-tetris",
     "env": {
         "BUILDPACK_URL": "https://github.com/srid/heroku-buildpack-elm.git",
-        "ELM_COMPILE": "make clean compile",
+        "ELM_COMPILE": "make",
         "ELM_STATIC_DIR": "."
     }
 }
