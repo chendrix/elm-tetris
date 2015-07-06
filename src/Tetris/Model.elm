@@ -4,3 +4,6 @@ import Matrix exposing (..)
 
 type Piece
   = I
+  | J
+  | L
+  | O
