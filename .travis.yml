@@ -10,3 +10,10 @@ before_script:
 - elm-make --yes --output raw-test.js TestRunner.elm
 - bash elm-io.sh raw-test.js test.js
 script: node test.js
+deploy:
+  provider: heroku
+  api_key:
+    secure: FAXChKZOj9rHT8GRfM9rxSWaR/cCDBYC/B37ZDMRh2iydwP5PlMYfUfXinPRxTYuXaeetryUAtIqY6EttVpVVQOlLnFga0TzFWNZHMtHrkidkWtiG3l6/f33hXCv+O2m5BTGazTWu39k+T1mDFv1HwiYAYCxq9Kr7oEAiU8lnGGa6eVDsHtSj14xho6IsNRFD9kuCXvgm0ISnrqJq8bIAetnhXlq/GYqSnKIOmbDJcfhv4PeFzLutork78Ras7vy5Gwjzzk+bQQeJxnP/xSS2aGzhmc/206Gx8lFe8oaZKm8BxGJoU4oc2ovEeoZS29WEAM+sB/9z/rWgcfEc7KO0N+S68qFYK2JO1gpqg0/4bWz+3EK17LuR32JDsV9G2nDcqplkKNOzvrJXN0k9tpGq3Nr+rJry/pD42pTp8HT3xkiM6LFZmhj786ZIfZlvUVvnqelSfGN3Wz6HGf90tsC5QXzuXXybj3gxFLSryL4VuIw8Mxd3Ql1zbmKc3N+ko6Yc9UqHdHrrwV6WTeK2YJ8RLkGcIl9kxXs3i+9NVgQLXIAu/Sfv5rLW1D6ywJs/Kd5gm1FGfiOq9v78N4ioQ7KFFPTkeP85UDzosLAA4VzpuOfEqNHdK9gAqjjgGHj7IuvGtRE6lC+MV/3L23rytjVeJOzUxY/dgIAcdSd5PGKjvc=
+  app: elm-tetris
+  on:
+    repo: chendrix/elm-tetris
