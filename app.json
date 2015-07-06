@@ -1,0 +1,9 @@
+{
+    "name": "Tetris clone in Elm",
+    "repository": "https://github.com/chendrix/elm-tetris",
+    "env": {
+        "BUILDPACK_URL": "https://github.com/srid/heroku-buildpack-elm.git",
+        "ELM_COMPILE": "elm make src/Tetris.elm",
+        "ELM_STATIC_DIR": "."
+    }
+}
