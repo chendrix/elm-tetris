@@ -10,7 +10,7 @@ import Text
 import List exposing (..)
 
 view _ =
-  [I, J, L, O]
+  [I, J, L, O, S, T, Z]
   |> map viewPiece
   |> flow down
 
@@ -25,6 +25,10 @@ viewPiece piece =
     J -> flow down [flow right [b, b, b], flow right [s, s, b]]
     L -> flow down [flow right [b, s, s], flow right [b, b, b]]
     O -> flow down [flow right [b, b], flow right [b, b]]
+    S -> flow down [flow right [s, b, b], flow right [b, b, s]]
+    T -> flow down [flow right [b, b, b], flow right [s, b, s]]
+    Z -> flow down [flow right [b, b, s], flow right [s, b, b]]
+    otherwise -> empty
 
 boxSize : Int
 boxSize = 20

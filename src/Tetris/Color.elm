@@ -1,7 +1,7 @@
 module Tetris.Color where
 
 import Tetris.Model exposing (..)
-import Color exposing (Color, rgb, red, yellow, hsla, toHsl)
+import Color exposing (Color, rgb, red, hsla, toHsl)
 
 color : Piece -> Color
 color piece =
@@ -10,6 +10,9 @@ color piece =
     J -> blue
     L -> orange
     O -> yellow
+    S -> green
+    T -> violet
+    Z -> red
 
 cyan : Color
 cyan = rgb 0 255 255
@@ -25,6 +28,12 @@ blue = rgb 0 0 255
 
 yellow : Color
 yellow = rgb 255 255 0
+
+green : Color
+green = rgb 0 255 0
+
+red : Color
+red = rgb 255 0 0
 
 darken : Float -> Color -> Color
 darken percent c =

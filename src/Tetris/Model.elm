@@ -7,3 +7,6 @@ type Piece
   | J
   | L
   | O
+  | S
+  | T
+  | Z
