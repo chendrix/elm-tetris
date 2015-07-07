@@ -11,8 +11,32 @@ import List exposing (..)
 
 view _ =
   [I, J, L, O, S, T, Z]
-  |> map viewPiece
+  |> concatMap allTetriminos
+  |> map viewTetrimino
   |> flow down
+
+viewTetrimino : Tetrimino -> Element
+viewTetrimino { piece, rotation } =
+  viewPiece piece
+  |> rotateTetrimino rotation
+
+rotateTetrimino : RotationUnit -> Element -> Element
+rotateTetrimino rotation e =
+  let
+    w = widthOf e
+    h = heightOf e
+    newW = case rotation of
+              CCW90 -> h
+              CCW270 -> h
+              otherwise -> w
+    newH = case rotation of
+              CCW90 -> w
+              CCW270 -> w
+              otherwise -> h
+  in
+    toForm e
+    |> rotate (inDegrees rotation)
+    |> (\f -> collage newW newH [f])
 
 viewPiece : Piece -> Element
 viewPiece piece =
